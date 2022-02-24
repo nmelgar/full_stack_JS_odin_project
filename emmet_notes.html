@@ -1,0 +1,124 @@
+<!-- https://www.theodinproject.com/paths/full-stack-javascript/courses/intermediate-html-and-css/lessons/emmet -->
+<!-- https://www.theodinproject.com/paths/full-stack-javascript/courses/nodejs/lessons/introduction-what-is-nodejs -->
+<!--GENERAL NOTES -------------------------------------------------------------- -->
+https://docs.emmet.io/
+https://docs.emmet.io/cheat-sheet/
+
+> this is for children 
++ this is for siblings
+
+<!-- -------------------------------------------------------------- -->
+<!-- ---------------------------------- -->
+<!--writing the ! symbol will produce the following lines -->
+<!-- write the ! symbol and press TAB  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<!-- -------------------------------------------------------------------------- -->
+
+link will result in:
+<link rel="stylesheet" href="">
+
+<!-- ---------------------------------- -->
+tag.class-name will result in:
+<span class="class-1"></span>
+tag.class1.class2#id1 will result in:
+<div class="class-1 class-2" id="main-id"></div>
+tag#id-name will result in:
+<footer id="footer-id"></footer>
+
+just type the class name and hit tab, a div with
+that class name will be created
+.class-name will result in:
+<div class="class-1"></div>
+
+button[type="button"]
+<button type="button"></button>
+
+
+<!-- CREATE CHILDREN-------------------------------------------------------------- -->
+create child element inside parent element
+div.purple>span.cyan will result in:
+<div class="purple">
+    <span class="cyan">
+    </span>
+</div>
+<!-- ---------------------------------- -->
+header>nav>ul>li*3{element will be inside the li}
+<header>
+    <nav>
+        <ul>
+            <li>element will be inside the li</li>
+            <li>element will be inside the li</li>
+            <li>element will be inside the li</li>
+        </ul>
+    </nav>
+</header>
+<!-- ---------------------------------- -->
+header>nav>ul>li*3{List Item $}
+<header>
+    <nav>
+        <ul>
+            <li>List Item 1</li>
+            <li>List Item 2</li>
+            <li>List Item 3</li>
+        </ul>
+    </nav>
+</header>
+<!-- ---------------------------------- -->
+header>nav>ul>li*3.class-${List Item $}
+<header>
+    <nav>
+        <ul>
+            <li class="class-1">List Item 1</li>
+            <li class="class-2">List Item 2</li>
+            <li class="class-3">List Item 3</li>
+        </ul>
+    </nav>
+</header>
+header>nav>ul>li*3.class-${List Item $$}
+by adding a dollar sign, the List Item will look like Item 01, Item 02, etc
+<!-- ---------------------------------- -->
+<!-- CREATE SIBLINGS-------------------------------------------------------------- -->
+header+main+footer
+<header></header>
+<main></main>
+<footer></footer>
+
+<!-- everything after the > will be a child of header -->
+heade>+main+footer
+<header>
+    <nav></nav>
+    <main></main>
+    <footer></footer>
+</header>
+
+<!-- use the ^ character by pressing AltGr an the keyboard key twice -->
+header>nav^main+footer
+<header>
+    <nav></nav>
+</header>
+<main></main>
+<footer></footer>
+
+<!-- use () as grouping characters -->
+(header>nav)+main+footer
+<header>
+    <nav></nav>
+</header>
+<main></main>
+<footer></footer>
+
